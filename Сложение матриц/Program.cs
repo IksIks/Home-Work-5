@@ -26,7 +26,8 @@ namespace Matrix_operation
                 }
                 else col = n;
             }
-                return;
+            int[,] matrix = new int[row, col];
+            return matrix;
         }
         static int[,] AdditionOfMatrices(int[,] matrix1, int[,] matrix2)
         {
@@ -43,45 +44,16 @@ namespace Matrix_operation
         static void Main()
         {
             Random r = new Random();
-            char index = new char();
-            int rowA = 0;
-            int colA = 0;
-            int rowB = 0;
-            int colB = 0;
-            int rowCol = 0; // общая переменная для строк и столбцов обеих матриц
-            while (true)
-            {
-                for (int i = 0; i < 2; i++)
-                {
-                    index = (i == 0) ? 'A' : 'B';
-                    for (int j = 0; j < 2; j++)
-                    {
-                        string s = (j == 0) ? "строк" : "столбцов";
-                        Console.Write($"Введите количество {s} матрицы {index}: ");
-                        bool success = int.TryParse(Console.ReadLine(), out rowCol);
-                        while (!success || rowCol < 0)
-                        {
-                            Console.Write($"Вводите только числа(положительные): ");
-                            success = int.TryParse(Console.ReadLine(), out rowCol);
-                        }
-                        if (index == 'A')
-                        {
-                            if (j == 0) rowA = rowCol;
-                            else colA = rowCol;
-                        }
-                        else
-                        {
-                            if (j == 0) rowB = rowCol;
-                            else colB = rowCol;
-                        }
-                    }
-                }
-                if (rowA != rowB || colA != colB)
-                    Console.WriteLine("Колличество строк и столбцов матрицы 'A' должно соответствовать" +
-                                      " матрице 'B'. Что то пошло не так, повторите ввод");
-                else break;
-            }
-            int[,] a = new int[rowA, colA], b = new int[rowA, colA], result = new int[rowA, colA];
+
+            //while (true)
+            //{
+
+            //    if (rowA != rowB || colA != colB)
+            //        Console.WriteLine("Колличество строк и столбцов матрицы 'A' должно соответствовать" +
+            //                          " матрице 'B'. Что то пошло не так, повторите ввод");
+            //    else break;
+            //}
+            int[,] a = BuildingMatrix();
             for (int i = 0; i < rowA; i++)
             {
                 for (int j = 0; j < colA; j++)
