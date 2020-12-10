@@ -43,42 +43,50 @@ namespace Matrix_operation
         }
         static void Main()
         {
-            Random r = new Random();
-
-            //while (true)
-            //{
-
-            //    if (rowA != rowB || colA != colB)
-            //        Console.WriteLine("Колличество строк и столбцов матрицы 'A' должно соответствовать" +
-            //                          " матрице 'B'. Что то пошло не так, повторите ввод");
-            //    else break;
-            //}
-            int[,] a = BuildingMatrix();
-            for (int i = 0; i < rowA; i++)
+                Console.WriteLine("Матрица 'A'\n");
+                int[,] a = BuildingMatrix();
+                Console.WriteLine("\nМатрица 'B'\n");
+                int[,] b = BuildingMatrix();
+            while (true)
             {
-                for (int j = 0; j < colA; j++)
+                if (a.GetLength(0) != b.GetLength(0) || a.GetLength(1) != b.GetLength(1))
+                {
+                    Console.WriteLine("Колличество строк и столбцов матрицы 'A' должно соответствовать" +
+                                        " матрице 'B'. Что то пошло не так, повторите ввод");
+                    Console.WriteLine("Матрица 'A'\n");
+                    a = BuildingMatrix();
+                    Console.WriteLine("\nМатрица 'B'\n");
+                    b = BuildingMatrix();
+                }
+                else break;
+            }
+            Random r = new Random();
+            for (int i = 0; i < a.GetLength(0); i++)
+            {
+                for (int j = 0; j < a.GetLength(1); j++)
                 {
                     a[i, j] = r.Next(1, 10);
                     Console.Write($"{a[i, j]} ");
-                }
+                }                
                 Console.Write("      ");
-                for (int j = 0; j < colA; j++)
+                for (int j = 0; j < a.GetLength(1); j++)
                 {
                     b[i, j] = r.Next(1, 10);
                     Console.Write($"{b[i, j]} ");
                 }
                 Console.WriteLine();
             }
-            result = AdditionOfMatrices(a, b);
+            int[,] result = AdditionOfMatrices(a, b);
             Console.WriteLine("\nСумма двух матриц");
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
                 {
-                    Console.Write($"{result[i, j],2} ");
+                    Console.Write($"{result[i, j],2}  ");
                 }
                 Console.WriteLine();
             }
+            Console.ReadKey();
         }
     }
 }
