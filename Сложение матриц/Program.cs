@@ -5,6 +5,29 @@ namespace Matrix_operation
 
     public class Matrix_operation
     {
+        static int[,] BuildingMatrix()
+        {
+            int row = 0;
+            int col = 0;
+            int n = 0;
+            for (int i = 0; i < 2; i++)
+            {
+                string s = (i == 0) ? "строк" : "столбцов";
+                Console.Write($"Введите количество {s} матрицы: ");
+                bool success = int.TryParse(Console.ReadLine(), out n);
+                while (!success || n < 0)
+                {
+                    Console.Write($"Вводите только числа(положительные): ");
+                    success = int.TryParse(Console.ReadLine(), out n);
+                }
+                if (i == 0)
+                {
+                    row = n;
+                }
+                else col = n;
+            }
+                return;
+        }
         static int[,] AdditionOfMatrices(int[,] matrix1, int[,] matrix2)
         {
             int[,] summ = new int[matrix1.GetLength(0), matrix1.GetLength(1)];

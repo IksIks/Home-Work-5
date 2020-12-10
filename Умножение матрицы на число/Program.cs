@@ -4,7 +4,7 @@ namespace Matrix_operation
 {
 
     public class Matrix_operation
-    {
+    {       
         static int[,] Multiplication(int[,] matrix, int number)
         {
             int[,] mult = new int[matrix.GetLength(0), matrix.GetLength(1)];
