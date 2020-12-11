@@ -61,7 +61,7 @@ namespace Matrix_Multiplication
             }
             return result;
         }
-        static void Print(int[,] matrix)
+        static void PrintResult(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -100,7 +100,7 @@ namespace Matrix_Multiplication
             FillingMatrices(ref b);
             a = MatrixMultiplication(a, b);
             Console.WriteLine("Произведение двух матриц равно");
-            Print(a);
+            PrintResult(a);
         }
     }
 }
