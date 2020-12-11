@@ -5,28 +5,6 @@ namespace Matrix_operation
 
     public class Matrix_operation
     {
-        static bool ConditionalTest(bool condition, ref int n)
-        {
-            while (!condition || n < 0)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write($"Вводите только числа(положительные): ");
-                Console.ResetColor();
-                condition = int.TryParse(Console.ReadLine(), out n);
-            }
-            return condition;
-        }
-        static bool ConditionalTest(bool condition)
-        {
-            while (!condition)
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write($"Вводите только числа(положительные): ");
-                Console.ResetColor();
-                condition = int.TryParse(Console.ReadLine(), out n);
-            }
-            return condition;
-        }
         static int[,] Multiplication(int[,] matrix, int number)
         {
             int[,] mult = new int[matrix.GetLength(0), matrix.GetLength(1)];
@@ -40,7 +18,7 @@ namespace Matrix_operation
             }
             return mult;
         }
-        static void PrintResult(int[,] matrix)
+        static void Print(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -66,8 +44,13 @@ namespace Matrix_operation
 
                 Console.Write($"Введите количество {s} матрицы ");
                 success = int.TryParse(Console.ReadLine(), out n);
-                success = ConditionalTest(success, ref n);
-                
+                while (!success || n < 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write($"Вводите только числа(положительные): ");
+                    Console.ResetColor();
+                    success = int.TryParse(Console.ReadLine(), out n);
+                }
                 if (i == 0)
                 {
                     row = n;
@@ -91,12 +74,12 @@ namespace Matrix_operation
             while (!success)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Вводите только целые числа: ");
+                Console.Write($"Вводите только целые числа: ");
                 Console.ResetColor();
                 success = int.TryParse(Console.ReadLine(), out n);
             }
             a = Multiplication(a, n);
-            PrintResult(a);            
+            Print(a);            
         }
     }
 }
