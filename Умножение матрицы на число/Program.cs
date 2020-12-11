@@ -8,7 +8,7 @@ namespace Matrix_operation
         static int[,] Multiplication(int[,] matrix, int number)
         {
             int[,] mult = new int[matrix.GetLength(0), matrix.GetLength(1)];
-
+            Console.WriteLine("\nРезультат умножения\n");
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
@@ -17,6 +17,17 @@ namespace Matrix_operation
                 }
             }
             return mult;
+        }
+        static void Print(int[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    Console.Write($"{matrix[i, j],2} ");
+                }
+                Console.WriteLine();
+            }
         }
         static void Main()
         {
@@ -63,14 +74,8 @@ namespace Matrix_operation
                 success = int.TryParse(Console.ReadLine(), out n);
             }
             a = Multiplication(a, n);
-            for (int i = 0; i < a.GetLength(0); i++)
-            {
-                for (int j = 0; j < a.GetLength(1); j++)
-                {
-                    Console.Write($"{a[i, j],2} ");
-                }
-                Console.WriteLine();
-            }
+            Print(a);
+            Console.ReadKey();
         }
     }
 }
