@@ -17,7 +17,9 @@ namespace Matrix_Multiplication
                 bool success = int.TryParse(Console.ReadLine(), out n);
                 while (!success || n < 0)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write($"Вводите только числа(положительные): ");
+                    Console.ResetColor();
                     success = int.TryParse(Console.ReadLine(), out n);
                 }
                 if (i == 0)
@@ -69,6 +71,7 @@ namespace Matrix_Multiplication
                 }
                 Console.WriteLine();
             }
+            Console.ReadKey();
         }
         static void Main(string[] args)
         {
@@ -98,8 +101,6 @@ namespace Matrix_Multiplication
             a = MatrixMultiplication(a, b);
             Console.WriteLine("Произведение двух матриц равно");
             Print(a);
-            Console.ReadKey();
-
         }
     }
 }

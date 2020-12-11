@@ -17,7 +17,9 @@ namespace Matrix_operation
                 bool success = int.TryParse(Console.ReadLine(), out n);
                 while (!success || n < 0)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write($"Вводите только числа(положительные): ");
+                    Console.ResetColor();
                     success = int.TryParse(Console.ReadLine(), out n);
                 }
                 if (i == 0)
@@ -51,8 +53,10 @@ namespace Matrix_operation
             {
                 if (a.GetLength(0) != b.GetLength(0) || a.GetLength(1) != b.GetLength(1))
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Колличество строк и столбцов матрицы 'A' должно соответствовать" +
                                         " матрице 'B'. Что то пошло не так, повторите ввод");
+                    Console.ResetColor();
                     Console.WriteLine("Матрица 'A'\n");
                     a = BuildingMatrix();
                     Console.WriteLine("\nМатрица 'B'\n");

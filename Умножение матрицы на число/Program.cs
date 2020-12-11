@@ -28,6 +28,7 @@ namespace Matrix_operation
                 }
                 Console.WriteLine();
             }
+            Console.ReadKey();
         }
         static void Main()
         {
@@ -45,7 +46,9 @@ namespace Matrix_operation
                 success = int.TryParse(Console.ReadLine(), out n);
                 while (!success || n < 0)
                 {
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.Write($"Вводите только числа(положительные): ");
+                    Console.ResetColor();
                     success = int.TryParse(Console.ReadLine(), out n);
                 }
                 if (i == 0)
@@ -70,12 +73,13 @@ namespace Matrix_operation
             success = int.TryParse(Console.ReadLine(), out n);
             while (!success)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write($"Вводите только целые числа: ");
+                Console.ResetColor();
                 success = int.TryParse(Console.ReadLine(), out n);
             }
             a = Multiplication(a, n);
-            Print(a);
-            Console.ReadKey();
+            Print(a);            
         }
     }
 }
