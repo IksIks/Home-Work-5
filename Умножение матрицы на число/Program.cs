@@ -18,7 +18,7 @@ namespace Matrix_operation
             }
             return mult;
         }
-        static void Print(int[,] matrix)
+        static void PrintResult(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
             {
@@ -79,7 +79,7 @@ namespace Matrix_operation
                 success = int.TryParse(Console.ReadLine(), out n);
             }
             a = Multiplication(a, n);
-            Print(a);            
+            PrintResult(a);            
         }
     }
 }
