@@ -7,7 +7,7 @@ namespace Text_in_word
 
     public class Program
     {
-        static string Word(string text)
+        static string WordMin(string text)
         {
             string[] word = text.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
             string min = word[0];
@@ -20,7 +20,7 @@ namespace Text_in_word
 
         public static void Main()
         {
-            string s = Word("А ББ ВВВ ГГГГ ДДДД ДД ЕЕ ХХ ЗЗЗ");
+            string s = WordMin("А ББ ВВВ ГГГГ ДДДД ДД ЕЕ ХХ ЗЗЗ");
             Console.Write(s);
             Console.ReadKey();
         }
