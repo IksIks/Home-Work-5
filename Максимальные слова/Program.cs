@@ -6,7 +6,7 @@ namespace TextMax
 {
     class Program
     {
-        static string[] Word(string text)
+        static string[] WordMax(string text)
         {
             string[] words = text.Split(new char[] { ' ', ',', '.' }, StringSplitOptions.RemoveEmptyEntries);
             string max = words[0];
@@ -33,7 +33,7 @@ namespace TextMax
         static void Main(string[] args)
         {           
            
-            string[] words = Word("А ББ ВВВ ГГГГ ДДДД ДД ЕЕ ХХ ЗЗЗ");
+            string[] words = WordMax("А ББ ВВВ ГГГГ ДДДД ДД ЕЕ ХХ ЗЗЗ");
             for (int i = 0; i < words.Length; i++)
             {
                 if (words[i] != null)
