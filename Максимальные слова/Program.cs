@@ -17,6 +17,13 @@ namespace TextMax
                     max = words[i];
                 }
             }
+            string[] maxWords = WordSearch(words, max);
+
+            return maxWords;
+        }
+
+        static string[] WordSearch(string[] words, string max)
+        {
             string[] maxWords = new string[words.Length];
             for (int i = 0; i < words.Length; i++)
             {
@@ -26,19 +33,18 @@ namespace TextMax
                     //Console.WriteLine(maxWords[i]);
                 }
             }
-            
             return maxWords;
         }
 
         static void Main(string[] args)
         {           
            
-            string[] words = WordMax("А ББ ВВВ ГГГГ ДДДД ДД ЕЕ ХХ ЗЗЗ");
-            for (int i = 0; i < words.Length; i++)
+            string[] maxWords = WordMax("А ББ ВВВ ГГГГ ДДДД ДД ЕЕ ХХ ЗЗЗ");
+            for (int i = 0; i < maxWords.Length; i++)
             {
-                if (words[i] != null)
+                if (maxWords[i] != null)
                 {
-                    Console.Write($"{words[i]} ");
+                    Console.Write($"{maxWords[i]} ");
                 }
             }
             Console.ReadKey();
