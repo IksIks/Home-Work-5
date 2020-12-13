@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Минимальное сл
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Максимальные слова", "Максимальные слова\Максимальные слова.csproj", "{2A272E38-F064-4C2D-8316-C2A2B0D92170}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Медленные слова", "Медленные слова\Медленные слова.csproj", "{D4FC0A32-AFAF-4044-81FD-717BD504D8AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Медленные слова", "Медленные слова\Медленные слова.csproj", "{D4FC0A32-AFAF-4044-81FD-717BD504D8AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прогрессия", "Прогрессия\Прогрессия.csproj", "{BF846158-49AE-4689-B833-268136E0B400}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D4FC0A32-AFAF-4044-81FD-717BD504D8AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4FC0A32-AFAF-4044-81FD-717BD504D8AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D4FC0A32-AFAF-4044-81FD-717BD504D8AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF846158-49AE-4689-B833-268136E0B400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF846158-49AE-4689-B833-268136E0B400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF846158-49AE-4689-B833-268136E0B400}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF846158-49AE-4689-B833-268136E0B400}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
