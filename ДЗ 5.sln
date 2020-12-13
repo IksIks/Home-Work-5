@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Медленные слов
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Прогрессия", "Прогрессия\Прогрессия.csproj", "{BF846158-49AE-4689-B833-268136E0B400}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Функция Аккермана", "Функция Аккермана\Функция Аккермана.csproj", "{2CA9D7FA-451D-4005-BA79-377EC2B4FB2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BF846158-49AE-4689-B833-268136E0B400}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF846158-49AE-4689-B833-268136E0B400}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF846158-49AE-4689-B833-268136E0B400}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CA9D7FA-451D-4005-BA79-377EC2B4FB2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CA9D7FA-451D-4005-BA79-377EC2B4FB2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CA9D7FA-451D-4005-BA79-377EC2B4FB2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CA9D7FA-451D-4005-BA79-377EC2B4FB2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
