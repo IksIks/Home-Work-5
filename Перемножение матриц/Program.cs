@@ -5,6 +5,10 @@ namespace Matrix_Multiplication
 {
     class Program
     {
+        /// <summary>
+        /// Создает двухмерную матрицу [row, col]
+        /// </summary>
+        /// <returns> матрица в размерности [row, col]</returns>
         static int[,] BuildingMatrix()
         {
             int row = 0;
@@ -31,6 +35,10 @@ namespace Matrix_Multiplication
             int[,] matrix = new int[row, col];
             return matrix;
         }
+        /// <summary>
+        /// Заполнение матрицы переданной по ссылке случайными числами
+        /// </summary>
+        /// <param name="matrix"> созданная матрица из меттода "BuildingMatrix" </param>
         static void FillingMatrices(ref int[,] matrix)
         {
             Random r = new Random();
@@ -44,6 +52,12 @@ namespace Matrix_Multiplication
                 Console.WriteLine();
             }
         }
+        /// <summary>
+        /// Перемножение матриц
+        /// </summary>
+        /// <param name="matrix1"> первая матрица </param>
+        /// <param name="matrix2"> вторая матрица </param>
+        /// <returns> матрица - произведение двух матриц </returns>
         static int[,] MatrixMultiplication(int[,] matrix1, int[,] matrix2)
         {
             int[,] result = new int[matrix1.GetLength(0), matrix2.GetLength(1)];
@@ -61,6 +75,10 @@ namespace Matrix_Multiplication
             }
             return result;
         }
+        /// <summary>
+        /// вывод на экран матрицы
+        /// </summary>
+        /// <param name="matrix"> произведение двухматриц </param>
         static void PrintResult(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)

@@ -7,6 +7,11 @@ namespace Text_in_word
 
     public class Program
     {
+        /// <summary>
+        /// Поиск минимального по длине слова
+        /// </summary>
+        /// <param name="text"> принимаемаемая фраза </param>
+        /// <returns> строка содержащая слово минимальной длины </returns>
         static string WordMin(string text)
         {
             string[] word = text.Split(new char[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);

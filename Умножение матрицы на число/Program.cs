@@ -5,6 +5,12 @@ namespace Matrix_operation
 
     public class Matrix_operation
     {
+        /// <summary>
+        /// Умножение матрицы на число
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <param name="number"></param>
+        /// <returns> матрица - произведение матрицы на число </returns>
         static int[,] Multiplication(int[,] matrix, int number)
         {
             int[,] mult = new int[matrix.GetLength(0), matrix.GetLength(1)];
@@ -18,6 +24,10 @@ namespace Matrix_operation
             }
             return mult;
         }
+        /// <summary>
+        /// вывод на экран матрицы 
+        /// </summary>
+        /// <param name="matrix"></param>
         static void PrintResult(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)

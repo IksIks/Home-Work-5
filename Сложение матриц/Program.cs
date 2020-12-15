@@ -5,6 +5,10 @@ namespace Matrix_operation
 
     public class Matrix_operation
     {
+        /// <summary>
+        /// Создает двухмерную матрицу [row, col]
+        /// </summary>
+        /// <returns> матрица в размерности [row, col]</returns>
         static int[,] BuildingMatrix()
         {
             int row = 0;
@@ -31,6 +35,12 @@ namespace Matrix_operation
             int[,] matrix = new int[row, col];
             return matrix;
         }
+        /// <summary>
+        /// Сложение двух матриц
+        /// </summary>
+        /// <param name="matrix1"></param>
+        /// <param name="matrix2"></param>
+        /// <returns> матрица - сумма двуъ матриц </returns>
         static int[,] AdditionOfMatrices(int[,] matrix1, int[,] matrix2)
         {
             int[,] summ = new int[matrix1.GetLength(0), matrix1.GetLength(1)];

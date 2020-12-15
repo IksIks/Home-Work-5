@@ -1,11 +1,15 @@
 ﻿using System;
-using System.Linq;
 
 
 namespace TextMax
 {
     class Program
     {
+        /// <summary>
+        /// Поиск максимально длинного слова из массива сслов
+        /// </summary>
+        /// <param name="text"> текст переданный на обработку </param>
+        /// <returns> возвращет массив из максимальных слов. Возврат зависит от функции "WordSearch" </returns>
         static string[] WordMax(string text)
         {
             string[] words = text.Split(new char[] { ' ', ',', '.' }, StringSplitOptions.RemoveEmptyEntries);
@@ -21,6 +25,12 @@ namespace TextMax
 
             return maxWords;
         }
+        /// <summary>
+        /// Поиск слов схожих по длинне с найденным максимальным словом в методе WordMax
+        /// </summary>
+        /// <param name="words"> массив слов </param>
+        /// <param name="max"> маскимальное по длине слово </param>
+        /// <returns></returns>
 
         static string[] WordSearch(string[] words, string max)
         {
@@ -30,15 +40,13 @@ namespace TextMax
                 if (words[i].Length == max.Length)
                 {
                     maxWords[i] = words[i];
-                    //Console.WriteLine(maxWords[i]);
                 }
             }
             return maxWords;
         }
 
         static void Main(string[] args)
-        {           
-           
+        {
             string[] maxWords = WordMax("А ББ ВВВ ГГГГ ДДДД ДД ЕЕ ХХ ЗЗЗ");
             for (int i = 0; i < maxWords.Length; i++)
             {

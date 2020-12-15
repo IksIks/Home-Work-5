@@ -4,6 +4,12 @@ namespace Функция_Аккермана
 {
     class Program
     {
+        /// <summary>
+        /// Вычисление функции Аккермана
+        /// </summary>
+        /// <param name="n"> принимаемое число N </param>
+        /// <param name="m"> принимаемое число M </param>
+        /// <returns> значение функции </returns>
         static int Akkerman(int n, int m)
         {
             if (n == 0) return m + 1;

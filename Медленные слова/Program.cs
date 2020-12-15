@@ -5,6 +5,11 @@ namespace Slow_Word
 {
 	class Program
 	{
+		/// <summary>
+		/// преобразует слово в символы и удаляет повторящиеся второй и последующие символы
+		/// </summary>
+		/// <param name="slowWord"> преобразуемая фраза </param>
+		/// <returns> возвращает фразу без повторяющихся символов </returns>
 		static string Word(string slowWord)
 		{
 			char[] letters = slowWord.ToCharArray();
@@ -21,13 +26,13 @@ namespace Slow_Word
 				}
 			}
 
-			string s = new string(phrase, 0, j + 1);
+			string s = new string(phrase, 0, j + 1); // создает новую строку размером j + 1, заполняя от нулевой позиции
 			return s;
 		}
-
 		static void Main(string[] args)
 		{
-			string s = Word("пппппппрррииииивввееееееттттт        ввввсссссееееммммм уууучччащщщщиммммссссяяяяя");
+
+			string s = Word(("пппппппррриииИИИивввееееееттттт        ввввсссссееееммммм уууучччащщщщиммммссссяяяяя").ToLower());
 			Console.Write(s);
 			Console.ReadKey();
 		}
