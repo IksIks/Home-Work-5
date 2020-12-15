@@ -7,7 +7,7 @@ namespace Progression
         /// <summary>
         /// Определение типа прогрессии
         /// </summary>
-        /// <param name="numbers"></param>
+        /// <param name="numbers"> члены прогрессии </param>
         static void Progression(params int[] numbers)
         {
             if (numbers.Length >= 3)
@@ -59,7 +59,7 @@ namespace Progression
         }
         static void Main(string[] args)
         {
-            int[] array = { 1, 3, 5, 7, 9, };
+            int[] array = { 1, 3, 5, 7, 9};
             Progression(array);
             Console.ReadKey();
         }
